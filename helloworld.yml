@@ -3,4 +3,4 @@
   hosts: all
   tasks:
   - name: Hello World!
-    shell: echo "Hi! Tower is working." >> /home/administrator/pleasera.txt
+    shell: echo "Hi! Tower is working." >> /home/administrator/sample.txt
