@@ -1,0 +1,14 @@
+- name: Install helm chart
+  hosts: all
+  tasks:
+  - name: Helm installation
+    helm:
+      host: localhost
+      chart:
+        name: mpm-frontend-deploy-dev-AWX
+        source:
+          type: directory
+          location: /home/administrator/helm-files/mpm-helm/mpm-v3 #https://kubernetes-charts.storage.googleapis.com
+      state: present
+      name: mpm-frontend-deploy-dev-AWX
+      namespace: default
