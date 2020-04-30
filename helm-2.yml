@@ -1,0 +1,6 @@
+---
+- name: Hello World!
+  hosts: all
+  tasks:
+  - name: Hello World!
+    shell: helm install test-chart /home/administrator/helm-files/mpm-helm/mpm-v3/mpm-frontend-deploy-dev-awx --set image_id=nginx --set build_id=1
