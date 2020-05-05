@@ -3,4 +3,4 @@
   hosts: all
   tasks:
   - name: Helm install mpm-frontend-awx
-    shell: echo {{ env_config }} > /home/administrator/ansible_playbook_inventory/{{ project_name }}.txt && helm upgrade mpm-frontend-deploy-dev-awx acheron-helm/mpm-frontend-deploy-dev-awx --install --set image_id={{ image_id }} --set build_id={{ build_id }} 
+    shell: echo {{ env_config }} > /home/administrator/ansible_playbook_inventory/{{ project_name }}.txt 
