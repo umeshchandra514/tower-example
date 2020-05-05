@@ -3,4 +3,5 @@
   hosts: all
   tasks:
   - name: Helm install mpm-frontend-awx
-    shell: echo env_config{{ ":" }} "\"{{ env_config }}\"" > /home/administrator/ansible_playbook_inventory/{{ project_name }} && helm upgrade {{ project_name }} acheron-helm/{{ project_name }} --install --set image_id={{ image_id }} --set build_id={{ build_id }} --values /home/administrator/ansible_playbook_inventory/{{ project_name }}
+    shell: echo env_config{{ ":" }} "\"{{ env_config }}\"" > /home/administrator/ansible_playbook_inventory/{{ project_name }} && helm upgrade {{ project_name }} acheron-helm/{{ project_name }} --install --set image_id={{ image_id }} --set build_id={{ build_id }} --set env_config="\"{{ env_config }}\""
+#    shell: echo env_config{{ ":" }} "\"{{ env_config }}\"" > /home/administrator/ansible_playbook_inventory/{{ project_name }} && helm upgrade {{ project_name }} acheron-helm/{{ project_name }} --install --set image_id={{ image_id }} --set build_id={{ build_id }} --values /home/administrator/ansible_playbook_inventory/{{ project_name }}
