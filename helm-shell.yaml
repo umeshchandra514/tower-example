@@ -3,4 +3,4 @@
   hosts: all
   tasks:
   - name: Helm install mpm-frontend-awx
-    shell: helm upgrade mpm-frontend-deploy-dev-awx acheron-helm/mpm-frontend-deploy-dev-awx --install --set image_id=nexusrepo.acheron-tech.com:9001/mpm-frontend/v3:2020-04-28.1 --set build_id=1
+    shell: helm upgrade mpm-frontend-deploy-dev-awx acheron-helm/mpm-frontend-deploy-dev-awx --install --set image_id={{ image_id }} --set build_id={{ build_id }}
