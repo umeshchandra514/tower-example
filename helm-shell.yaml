@@ -3,4 +3,4 @@
   hosts: all
   tasks:
   - name: Helm install mpm-frontend-awx
-    shell: echo {{ env_config }} > /home/administrator/ansible_playbook_inventory/{{ project_name }}.txt 
+    shell: echo "{{ env_config }}" > /home/administrator/ansible_playbook_inventory/{{ project_name }}.txt 
